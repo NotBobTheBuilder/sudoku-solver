@@ -20,7 +20,7 @@ object Sudoku extends App {
     }
   }
 
-  def knownCells(g: Map[Pos, Cell]): Int = g.toSeq.count(_._2.isInstanceOf[KnownCell])
+  def knownCells(g: Map[Pos, Cell]): Int = g.count(_._2.isInstanceOf[KnownCell])
 
   def constrained(g: Map[Pos, Cell]): Map[Pos, Cell] = {
     val newGrid = g.map({ 
